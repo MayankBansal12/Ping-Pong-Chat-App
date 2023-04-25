@@ -1,0 +1,105 @@
+*{
+    --first-color: rgb(67, 67, 160);
+    --second-color: rgb(45, 45, 109);
+}
+body{
+    background: linear-gradient(to top left, rgb(60, 60, 167),rgba(134, 253, 134,0.4));
+    margin: 0;
+    padding: 0;
+    height: 97vh;
+}
+nav.navbar{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.title{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(45, 45, 109);
+}
+.title:hover{
+    transition: all 0.3s;
+    color:  rgb(67, 67, 160);
+}
+.nav_logo{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.container{
+    width: 80vw;
+    padding: 20px;
+    background-color: rgba(255, 255, 255,0.35);
+    height: 70vh;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.3);
+}
+.message{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    margin-block: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.left{
+    float: left;
+    clear: both;
+    background-color: var(--first-color);
+}
+.right{
+    float: right;
+    clear: both;
+    background-color: var(--second-color);
+}
+.center{
+    float: left;
+    clear: both;
+    background-color: #000000db;
+    width: 98.75%;
+    text-align: center;
+    height: 20px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    padding: 5px;
+}
+.send-container{
+    margin: 10px;
+    text-align: center;
+}
+.send-container input{
+    position: relative;
+    width: 70vw;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgb(49, 40, 40);
+}
+input:focus{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.btn{
+    background-color: var(--second-color);
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25);
+}
+.btn:hover{
+    transform: scale(0.93);
+    background-color: var(--first-color);
+}
