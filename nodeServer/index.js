@@ -1,3 +1,5 @@
+
+// Server side for socket.io
 const io = require('socket.io')(8000, {
     cors: {
       origin: '*',
@@ -6,19 +8,22 @@ const io = require('socket.io')(8000, {
   
 const users={};
 
-
+// Connection for new socket request
 io.on("connection",socket=>{
+    // Whenever a new user joins
     socket.on("new-user-joined",name=>{
-        console.log("New user joined",name);
         users[socket.id]=name;
-        socket.broadcast.emit("user-joined",name);
+        // socket.broadcast.emit("user-joined",{name:name, totalUsers: users});
+        io.emit("user-joined",{name:name, totalUsers: users}); 
     });
+    // When a new message is send
     socket.on("send",message=>{
         socket.broadcast.emit("receive",{message: message, name: users[socket.id]});
     });
+    // When a user lefts
     socket.on("disconnect",message=>{
-        socket.broadcast.emit("leave", users[socket.id]);
+        const name=users[socket.id]
         delete users[socket.id];
+        socket.broadcast.emit("leave",{name: name, totalUsers: users});
     });
-    
 });
