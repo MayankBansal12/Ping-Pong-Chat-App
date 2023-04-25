@@ -23,6 +23,7 @@ const append=(message,position)=>{
     }
 }
 
+// Find the users who are online
 const findCount=(users)=>{
     const onlineCount=document.querySelector(".online-count span");
     const length = Object.keys(users).length;
