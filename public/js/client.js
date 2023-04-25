@@ -1,5 +1,5 @@
 // Client side for socket.io
-const socket=io("https://ping-pong-chat-app.onrender.com");
+const socket=io(`https://ping-pong-chat-app.onrender.com`);
 
 // Required html elements
 const form=document.getElementById("send-container");
