@@ -40,7 +40,7 @@ form.addEventListener("submit",(event)=>{
 })
 
 // For new users's name
-let username=prompt("Enter your name");
+let username=prompt("Enter your name to enter the chat");
 
 // In case new user joins
 socket.emit("new-user-joined",username);

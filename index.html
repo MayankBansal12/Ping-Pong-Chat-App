@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./public/assets/chat icon.png" type="image/png">
     <title>Ping Pong Chat App - Real Time Chat Application</title>
+
     <!-- Script for socket.io -->
     <script defer src="https://ping-pong-chat-app.onrender.com/socket.io/socket.io.js"></script>
     <script defer src="public/js/client.js"></script>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="public/css/style.css">
@@ -21,7 +24,7 @@
         <div class="online-count"><i class="fa-solid fa-circle"></i><span>...</span>users online</div>
     </nav>
     <div class="container">
-        <div class="message center" style="font-size: 1rem; height: 25px; margin-block: 10px;">Welcome to Ping-Pong Chat. You can begin the chat with people who are online now!</div>
+        <div class="message center" style="font-size: 1.2rem; height: fit-content; margin-block: 10px;">Welcome to Ping-Pong Chat. You can begin the chat with people who are online now!</div>
     </div>
     <form action="#" id="send-container" class="send-container">
         <input type="text" placeholder="Enter your message" name="message" id="messageInput" required>
